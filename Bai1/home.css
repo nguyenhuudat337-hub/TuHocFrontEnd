@@ -7,7 +7,7 @@
 
 body {
     display: flex;
-    background-image: url(/homebgr.png);
+    background-image: url("homebgr.png");
     background-size: 1000px;
     background-repeat: no-repeat;
     justify-content: center;
