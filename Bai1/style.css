@@ -72,6 +72,17 @@ h1{
     border-radius: 20px;
 }
 
+
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}
+
+
+
 .form-options{
     display: flex;
 }

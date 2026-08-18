@@ -7,14 +7,13 @@
     <title>Login</title>
 </head>
 <body>
-    <script src ="main.js"></script>
     <div class = "all-part">
         <h1>Hệ thống hack MXH uy tín số 1 VN!!!!</h1>
         <img class="logo" src="4D174C57-B880-4D50-9BFA-5235FC228B07_1_201_a.jpeg" alt="logo">
         <div class ="form-login">
             <h2>Đăng nhập</h2>
             <p>Chào mừng bạn đến với hệ thống của chúng tôi</p>
-            <form>   
+            <form id ="loginForm">   
                 <div class="email">
                     <label for="email">Tài khoản</label>
                     <input type="email" id = "email" placeholder="Nhập email" required>
@@ -22,7 +21,12 @@
 
                 <div class="password">
                     <label for="password">Mật khẩu</label>
-                    <input type="password" id = "password" minlength="6" placeholder="Nhập mật khẩu" required>
+                    <input type="password" id = "password" placeholder="Nhập mật khẩu" required>
+                </div>
+
+
+                <div>
+                    <p id="message"></p>
                 </div>
 
                 <div class="form-options">
@@ -39,5 +43,6 @@
             </form>
         </div>
     </div>
+    <script src="main.js"></script>
 </body>
 </html>
