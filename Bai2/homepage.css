@@ -1,0 +1,43 @@
+/* Chống trượt/cuộn ngang trên toàn bộ trang web */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+  
+  /* Đảm bảo kích thước thẻ được tính chuẩn, tránh bị dội viền làm tràn màn hình */
+* {
+    box-sizing: border-box;
+}
+.title{
+    text-align: center;
+    line-height: 10px;
+}
+.bgr-home{
+    width: 100%;
+    height: 500px;
+}
+.searchproduct{
+    width: 100%;
+    height: 30px;
+}
+p{
+    text-align: center;
+}
+
+  /* 2. Hiển thị dạng lưới 3 sản phẩm 1 dòng */
+.product-grid {
+    display: grid;
+    /* Chia chính xác 3 cột bằng nhau (mỗi cột chiếm 1fr) */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 25px; /* Khoảng cách giữa các sản phẩm */
+}
+  
+.product-image{
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+.product-rating{
+    display: flex; /* Đưa các phần tử con nằm cùng 1 hàng ngang */
+    justify-content: space-between;
+}
