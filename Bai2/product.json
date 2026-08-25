@@ -1,0 +1,406 @@
+[
+    {
+      "id": 1,
+      "name": "iPhone 15 Pro Max 256GB",
+      "price": 29500000,
+      "rating": 4.9,
+      "category": "phone",
+      "image": "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=500&auto=format&fit=crop"
+    },
+    {
+      "id": 2,
+      "name": "iPhone 15 Pro 128GB",
+      "price": 25990000,
+      "rating": 4.8,
+      "category": "phone",
+      "image": "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=500&auto=format&fit=crop"
+    },
+    {
+      "id": 3,
+      "name": "iPhone 14 Pro Max 256GB",
+      "price": 22990000,
+      "rating": 4.8,
+      "category": "phone",
+      "image": "https://images.unsplash.com/photo-1632661674596-df8be070a5c5?w=500&auto=format&fit=crop"
+    },
+    {
+      "id": 4,
+      "name": "iPhone 13 128GB",
+      "price": 13490000,
+      "rating": 4.7,
+      "category": "phone",
+      "image": "https://images.unsplash.com/photo-1632661674596-df8be070a5c5?w=500&auto=format&fit=crop"
+    },
+    {
+      "id": 5,
+      "name": "Samsung Galaxy S24 Ultra 256GB",
+      "price": 27990000,
+      "rating": 4.8,
+      "category": "phone",
+      "image": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=500&auto=format&fit=crop"
+    },
+    {
+      "id": 6,
+      "name": "Samsung Galaxy S24 256GB",
+      "price": 18990000,
+      "rating": 4.7,
+      "category": "phone",
+      "image": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=500&auto=format&fit=crop"
+    },
+    {
+      "id": 7,
+      "name": "Samsung Galaxy Z Fold 5",
+      "price": 34990000,
+      "rating": 4.6,
+      "category": "phone",
+      "image": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=500&auto=format&fit=crop"
+    },
+    {
+      "id": 8,
+      "name": "Xiaomi 14 Ultra",
+      "price": 19990000,
+      "rating": 4.7,
+      "category": "phone",
+      "image": "https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=500&auto=format&fit=crop"
+    },
+    {
+      "id": 9,
+      "name": "OPPO Find X7 Ultra",
+      "price": 21990000,
+      "rating": 4.6,
+      "category": "phone",
+      "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500&auto=format&fit=crop"
+    },
+    {
+      "id": 10,
+      "name": "Google Pixel 8 Pro",
+      "price": 21490000,
+      "rating": 4.8,
+      "category": "phone",
+      "image": "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=500&auto=format&fit=crop"
+    },
+  
+    {
+      "id": 11,
+      "name": "MacBook Pro 14 M3 Pro",
+      "price": 39990000,
+      "rating": 4.9,
+      "category": "laptop",
+      "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=500&auto=format&fit=crop"
+    },
+    {
+      "id": 12,
+      "name": "MacBook Pro 16 M3 Max",
+      "price": 69990000,
+      "rating": 4.9,
+      "category": "laptop",
+      "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=500&auto=format&fit=crop"
+    },
+    {
+      "id": 13,
+      "name": "MacBook Air 13 M2",
+      "price": 24990000,
+      "rating": 4.8,
+      "category": "laptop",
+      "image": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=500&auto=format&fit=crop"
+    },
+    {
+      "id": 14,
+      "name": "MacBook Air 15 M3",
+      "price": 32990000,
+      "rating": 4.8,
+      "category": "laptop",
+      "image": "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?w=500&auto=format&fit=crop"
+    },
+    {
+      "id": 15,
+      "name": "Dell XPS 13 Plus",
+      "price": 32990000,
+      "rating": 4.7,
+      "category": "laptop",
+      "image": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=500&auto=format&fit=crop"
+    },
+    {
+      "id": 16,
+      "name": "Dell XPS 15 OLED",
+      "price": 45990000,
+      "rating": 4.7,
+      "category": "laptop",
+      "image": "https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=500&auto=format&fit=crop"
+    },
+    {
+      "id": 17,
+      "name": "ASUS ROG Zephyrus G14",
+      "price": 38990000,
+      "rating": 4.8,
+      "category": "laptop",
+      "image": "https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=500&auto=format&fit=crop"
+    },
+    {
+      "id": 18,
+      "name": "ASUS Zenbook 14 OLED",
+      "price": 24990000,
+      "rating": 4.6,
+      "category": "laptop",
+      "image": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500&auto=format&fit=crop"
+    },
+    {
+      "id": 19,
+      "name": "Lenovo ThinkPad X1 Carbon",
+      "price": 35990000,
+      "rating": 4.7,
+      "category": "laptop",
+      "image": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=500&auto=format&fit=crop"
+    },
+    {
+      "id": 20,
+      "name": "HP Spectre x360 14",
+      "price": 33990000,
+      "rating": 4.6,
+      "category": "laptop",
+      "image": "https://images.unsplash.com/photo-1525547719571-a2d4ac882e17?w=500&auto=format&fit=crop"
+    },
+  
+    {
+      "id": 21,
+      "name": "Apple Watch Series 9 GPS 45mm",
+      "price": 10290000,
+      "rating": 4.8,
+      "category": "watch",
+      "image": "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=500&auto=format&fit=crop"
+    },
+    {
+      "id": 22,
+      "name": "Apple Watch Ultra 2",
+      "price": 21490000,
+      "rating": 4.9,
+      "category": "watch",
+      "image": "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=500&auto=format&fit=crop"
+    },
+    {
+      "id": 23,
+      "name": "Apple Watch SE 2023 44mm",
+      "price": 6490000,
+      "rating": 4.6,
+      "category": "watch",
+      "image": "https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?w=500&auto=format&fit=crop"
+    },
+    {
+      "id": 24,
+      "name": "Samsung Galaxy Watch 6 Classic",
+      "price": 7990000,
+      "rating": 4.7,
+      "category": "watch",
+      "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&auto=format&fit=crop"
+    },
+    {
+      "id": 25,
+      "name": "Samsung Galaxy Watch 6 44mm",
+      "price": 6490000,
+      "rating": 4.6,
+      "category": "watch",
+      "image": "https://images.unsplash.com/photo-1579586337278-3befd40fd17a?w=500&auto=format&fit=crop"
+    },
+    {
+      "id": 26,
+      "name": "Garmin Fenix 7 Sapphire",
+      "price": 18990000,
+      "rating": 4.8,
+      "category": "watch",
+      "image": "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=500&auto=format&fit=crop"
+    },
+    {
+      "id": 27,
+      "name": "Garmin Venu 3",
+      "price": 10990000,
+      "rating": 4.7,
+      "category": "watch",
+      "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&auto=format&fit=crop"
+    },
+    {
+      "id": 28,
+      "name": "Xiaomi Watch 2 Pro",
+      "price": 4990000,
+      "rating": 4.5,
+      "category": "watch",
+      "image": "https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?w=500&auto=format&fit=crop"
+    },
+  
+    {
+      "id": 29,
+      "name": "AirPods Pro 2 USB-C",
+      "price": 5890000,
+      "rating": 4.8,
+      "category": "audio",
+      "image": "https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?w=500&auto=format&fit=crop"
+    },
+    {
+      "id": 30,
+      "name": "AirPods Max",
+      "price": 12990000,
+      "rating": 4.7,
+      "category": "audio",
+      "image": "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=500&auto=format&fit=crop"
+    },
+    {
+      "id": 31,
+      "name": "AirPods 3",
+      "price": 3990000,
+      "rating": 4.6,
+      "category": "audio",
+      "image": "https://images.unsplash.com/photo-1600294037681-c80b4cb5b434?w=500&auto=format&fit=crop"
+    },
+    {
+      "id": 32,
+      "name": "Sony WH-1000XM5",
+      "price": 8490000,
+      "rating": 4.9,
+      "category": "audio",
+      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&auto=format&fit=crop"
+    },
+    {
+      "id": 33,
+      "name": "Sony WF-1000XM5",
+      "price": 5990000,
+      "rating": 4.8,
+      "category": "audio",
+      "image": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=500&auto=format&fit=crop"
+    },
+    {
+      "id": 34,
+      "name": "Bose QuietComfort Ultra",
+      "price": 9990000,
+      "rating": 4.8,
+      "category": "audio",
+      "image": "https://images.unsplash.com/photo-1546435770-a3e426bf472b?w=500&auto=format&fit=crop"
+    },
+    {
+      "id": 35,
+      "name": "JBL Charge 5",
+      "price": 3690000,
+      "rating": 4.7,
+      "category": "audio",
+      "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=500&auto=format&fit=crop"
+    },
+    {
+      "id": 36,
+      "name": "JBL Flip 6",
+      "price": 2490000,
+      "rating": 4.6,
+      "category": "audio",
+      "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=500&auto=format&fit=crop"
+    },
+    {
+      "id": 37,
+      "name": "Marshall Stanmore III",
+      "price": 9490000,
+      "rating": 4.8,
+      "category": "audio",
+      "image": "https://images.unsplash.com/photo-1545454675-3531b543be5d?w=500&auto=format&fit=crop"
+    },
+    {
+      "id": 38,
+      "name": "Marshall Emberton II",
+      "price": 3990000,
+      "rating": 4.7,
+      "category": "audio",
+      "image": "https://images.unsplash.com/photo-1545454675-3531b543be5d?w=500&auto=format&fit=crop"
+    },
+  
+    {
+      "id": 39,
+      "name": "Bàn phím cơ Keychron K2 V2",
+      "price": 1950000,
+      "rating": 4.7,
+      "category": "accessory",
+      "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=500&auto=format&fit=crop"
+    },
+    {
+      "id": 40,
+      "name": "Bàn phím cơ Keychron Q1 Pro",
+      "price": 4490000,
+      "rating": 4.8,
+      "category": "accessory",
+      "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=500&auto=format&fit=crop"
+    },
+    {
+      "id": 41,
+      "name": "Chuột Logitech MX Master 3S",
+      "price": 2490000,
+      "rating": 4.9,
+      "category": "accessory",
+      "image": "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?w=500&auto=format&fit=crop"
+    },
+    {
+      "id": 42,
+      "name": "Chuột Logitech MX Anywhere 3S",
+      "price": 1890000,
+      "rating": 4.7,
+      "category": "accessory",
+      "image": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=500&auto=format&fit=crop"
+    },
+    {
+      "id": 43,
+      "name": "Màn hình Dell UltraSharp U2723QE 27 inch",
+      "price": 12890000,
+      "rating": 4.8,
+      "category": "accessory",
+      "image": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=500&auto=format&fit=crop"
+    },
+    {
+      "id": 44,
+      "name": "Màn hình LG UltraFine 27UP850",
+      "price": 11990000,
+      "rating": 4.7,
+      "category": "accessory",
+      "image": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=500&auto=format&fit=crop"
+    },
+    {
+      "id": 45,
+      "name": "Máy ảnh Sony Alpha A7 IV",
+      "price": 55990000,
+      "rating": 4.9,
+      "category": "accessory",
+      "image": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=500&auto=format&fit=crop"
+    },
+    {
+      "id": 46,
+      "name": "Máy ảnh Canon EOS R6 Mark II",
+      "price": 59990000,
+      "rating": 4.8,
+      "category": "accessory",
+      "image": "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=500&auto=format&fit=crop"
+    },
+    {
+      "id": 47,
+      "name": "Nintendo Switch OLED",
+      "price": 7490000,
+      "rating": 4.8,
+      "category": "accessory",
+      "image": "https://images.unsplash.com/photo-1578303512597-81e6cc155b3e?w=500&auto=format&fit=crop"
+    },
+    {
+      "id": 48,
+      "name": "PlayStation 5 Slim",
+      "price": 13490000,
+      "rating": 4.9,
+      "category": "accessory",
+      "image": "https://images.unsplash.com/photo-1606813907291-d86efa9b94db?w=500&auto=format&fit=crop"
+    },
+    {
+      "id": 49,
+      "name": "Xbox Series X",
+      "price": 12990000,
+      "rating": 4.8,
+      "category": "accessory",
+      "image": "https://images.unsplash.com/photo-1621259182978-fbf93132d53d?w=500&auto=format&fit=crop"
+    },
+    {
+      "id": 50,
+      "name": "Meta Quest 3 128GB",
+      "price": 12990000,
+      "rating": 4.7,
+      "category": "accessory",
+      "image": "https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac?w=500&auto=format&fit=crop"
+    }
+  ]
