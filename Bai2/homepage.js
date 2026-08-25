@@ -1,6 +1,19 @@
 const productGrid = document.getElementById('product-grid');
 const searchInput = document.querySelector('.searchproduct');
-const products = [];
+const btnCategory = document.querySelectorAll(`.category-btn`);
+const btnSortSelect = document.querySelector(`#sortPrice`);
+let products = [];
+let currentList = [];
+async function readJSON(){
+    try{
+        const responese = await fetch("./product.json");
+        products = await responese.json();
+        hienThiSp(products);
+        currentList = products;
+    }catch(error){
+        console.log('Lỗi khi tải sản phẩm: ',error);
+    }
+}
 function addToCart(productId){
     let product = products.find(item => item.id === productId);
     if(product){
@@ -33,12 +46,44 @@ function hienThiSp(list=products){
     }).join(' ');
     productGrid.innerHTML = htmlContent; //đưa nội dung vào giao diện
 }
-
-hienThiSp();
+readJSON();
 searchInput.addEventListener('input',function(){
     const keyWord = searchInput.value.toLowerCase().trim();
-    let product = products.filter(item => {
+    currentList = products.filter(item => {
         return item.name.toLowerCase().includes(keyWord);
     });
+    if(currentList.length === 0){
+        productGrid.innerHTML = '<p>Sản phẩm không tồn tại</p>';
+    }else{
+        hienThiSp(currentList);
+    }
+    btnSortSelect.value = 'default';//nếu chuyển category thì phải chuyển selector về trạng thái default
+    
+});
+btnCategory.forEach(btn => {
+    btn.addEventListener('click',function(){
+        btnCategory.forEach(b => {
+            b.classList.remove('active');
+        });
+        this.classList.add('active');
+        const category = this.dataset.category;
+        if (category === 'all'){
+            currentList = products;
+        }else{
+            currentList = products.filter(item => item.category === category);
+        }
+        hienThiSp(currentList);
+        btnSortSelect.value = 'default';//nếu chuyển category thì phải chuyển selector về trạng thái default
+    });
+});
+btnSortSelect.addEventListener("change",function (){
+    let product = currentList.slice();
+    if (btnSortSelect.value === "asc"){
+        product.sort((a , b) => a.price - b.price);
+    }else if (btnSortSelect.value === "desc"){
+        product.sort((a , b) => b.price - a.price);
+    }else{
+        product = currentList.slice();
+    }
     hienThiSp(product);
 });
