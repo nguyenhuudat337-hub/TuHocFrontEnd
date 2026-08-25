@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel ="stylesheet" href ="homepage.css">
+    <link rel ="stylesheet" href ="/CSS/homepage.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang chủ</title>
@@ -11,9 +11,15 @@
         <h1>HDAT MOBILE</h1>
         <p>Uy tín tạo nên thương hiệu</p>
     </div>
-    <img class="bgr-home" src = "bgrhome.png"></img>
+    <img class="bgr-home" src = "/Picture/bgrhome.png"></img>
     <p>DANH SÁCH SẢN PHẨM</p>
-    <input class= "searchproduct" type="text" placeholder="Nhập tên sản phầm"></input>
+    <div class = "header"> 
+        <input class= "searchproduct" type="text" placeholder="Nhập tên sản phầm"></input>
+        <button class="btn-cart">
+            <img class="cart" src ="https://cdn-icons-png.flaticon.com/512/1413/1413908.png">
+            <p>Giỏ Hàng</p>
+        </button>
+    </div>
     <div class ="bar">
         <select id="sortPrice">
             <option value="default">Mặc định</option>
@@ -30,6 +36,6 @@
     <div class = "container">
         <div id= "product-grid" class = "product-grid"></div>
     </div>
-    <script src ="homepage.js"></script>
+    <script src ="/JS/homepage.js"></script>
 </body>
 </html>

@@ -2,11 +2,12 @@ const productGrid = document.getElementById('product-grid');
 const searchInput = document.querySelector('.searchproduct');
 const btnCategory = document.querySelectorAll(`.category-btn`);
 const btnSortSelect = document.querySelector(`#sortPrice`);
+const btnCart = document.querySelector(`.btn-cart`);
 let products = [];
 let currentList = [];
 async function readJSON(){
     try{
-        const responese = await fetch("./product.json");
+        const responese = await fetch("/JSON/product.json");
         products = await responese.json();
         hienThiSp(products);
         currentList = products;
@@ -86,4 +87,7 @@ btnSortSelect.addEventListener("change",function (){
         product = currentList.slice();
     }
     hienThiSp(product);
+});
+btnCart.addEventListener("click",function(){
+    window.location.href = "cartpage.html";
 });
