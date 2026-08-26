@@ -1,0 +1,48 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+  
+  /* Đảm bảo kích thước thẻ được tính chuẩn, tránh bị dội viền làm tràn màn hình */
+* {
+    box-sizing: border-box;
+}
+h1{
+    text-align: center;
+}
+.product-card{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid black;
+    margin-top: 20px;
+}
+.imgProduct{
+    width: 100px;
+    height: 60px;
+}
+.buttonDelete{
+    width: 30px;
+    height: 30px;
+
+}
+.imgDelete{
+    width: 10px;
+    height: 10px;
+}
+.bottomBar {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+h2{
+    margin-left: 20px;
+}
+.productCart-grid{
+    margin-bottom: 70px;
+}

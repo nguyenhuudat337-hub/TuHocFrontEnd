@@ -18,8 +18,28 @@ async function readJSON(){
 function addToCart(productId){
     let product = products.find(item => item.id === productId);
     if(product){
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        const existing = cart.find(item => item.id === productId);
+
+        if(existing){
+            existing.quantity += 1;
+        }else {
+            cart.push({
+                id: product.id,
+                name: product.name,
+                price: product.price,
+                image: product.image,
+                quantity: 1
+            });
+        }
+
+        localStorage.setItem('cart',JSON.stringify(cart));
+        
         alert(`Bạn vừa thêm ${product.name} vào giỏ hàng`);
         console.log(`Bạn vừa thêm ${product.name} vào giỏ hàng`);
+    }else{
+        return;
     }
 }
 function hienThiSp(list=products){
