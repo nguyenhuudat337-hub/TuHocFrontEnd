@@ -46,3 +46,8 @@ h2{
 .productCart-grid{
     margin-bottom: 70px;
 }
+.topBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

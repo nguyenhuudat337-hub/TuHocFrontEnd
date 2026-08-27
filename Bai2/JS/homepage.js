@@ -3,6 +3,7 @@ const searchInput = document.querySelector('.searchproduct');
 const btnCategory = document.querySelectorAll(`.category-btn`);
 const btnSortSelect = document.querySelector(`#sortPrice`);
 const btnCart = document.querySelector(`.btn-cart`);
+const cartCount = document.querySelector(`.cart-count`);
 let products = [];
 let currentList = [];
 async function readJSON(){
@@ -14,6 +15,14 @@ async function readJSON(){
     }catch(error){
         console.log('Lỗi khi tải sản phẩm: ',error);
     }
+}
+function capNhatSoLuongGioHang() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    // Tổng số lượng (cộng dồn quantity của từng sản phẩm)
+    const total = cart.reduce((sum, item) => sum + item.quantity, 0);
+
+    cartCount.textContent = total;
 }
 function addToCart(productId){
     let product = products.find(item => item.id === productId);
@@ -33,14 +42,13 @@ function addToCart(productId){
                 quantity: 1
             });
         }
-
         localStorage.setItem('cart',JSON.stringify(cart));
-        
         alert(`Bạn vừa thêm ${product.name} vào giỏ hàng`);
         console.log(`Bạn vừa thêm ${product.name} vào giỏ hàng`);
     }else{
         return;
     }
+    capNhatSoLuongGioHang();
 }
 function hienThiSp(list=products){
     //map trả về mảng gồm các sản phẩm có giao diện, join nối chúng lại 
@@ -65,7 +73,8 @@ function hienThiSp(list=products){
             </div>
             `;
     }).join(' ');
-    productGrid.innerHTML = htmlContent; //đưa nội dung vào giao diện
+    productGrid.innerHTML = htmlContent; 
+    capNhatSoLuongGioHang();//đưa nội dung vào giao diện
 }
 readJSON();
 searchInput.addEventListener('input',function(){

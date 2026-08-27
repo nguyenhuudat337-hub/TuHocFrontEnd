@@ -3,6 +3,7 @@ const btnDeleteProduct = document.querySelector('.buttonDelete');
 const btnMinus = document.querySelector('.btn-minus');
 const btnPlus = document.querySelector('.btn-plus');
 const sumProduct = document.querySelector('.totalAmount')
+const btnDeleteAll = document.querySelector('.deleteAll');
 function xoaSanPham(productId, productName) {
     const ok = confirm(`Bạn có chắc chắn xóa "${productName}"?`);
     if (!ok) return;
@@ -14,7 +15,7 @@ function xoaSanPham(productId, productName) {
 };
 function tangSoLuong(productId){
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    item = cart.find(item => item.id === productId);
+    item = cart.find(product => product.id === productId);
     item.quantity += 1;
     localStorage.setItem('cart', JSON.stringify(cart));
     hienThiGioHang();
@@ -22,7 +23,7 @@ function tangSoLuong(productId){
 }
 function giamSoLuong(productId,productName){
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    item = cart.find(item => item.id === productId);
+    item = cart.find(product => product.id === productId);
     if (item.quantity === 1){
         xoaSanPham(productId, productName);
         return;
@@ -66,8 +67,14 @@ function hienThiGioHang(){
         cartContentHtml = '<p>Bạn chưa Có Sản Phẩm Nào</p>'
     }
     productGridCart.innerHTML = cartContentHtml;
-    sumProduct.innerHTML = sum;
+    sumProduct.innerHTML = `${sum.toLocaleString('vi-VN')} ₫`;
 };
-
 hienThiGioHang();
-
+btnDeleteAll.addEventListener('click',function(){
+    let ok = confirm(`Bạn có chắc chắn xoá hết sản phẩm?`);
+    if(!ok) return;
+    let cart = JSON.parse(localStorage.getItem('cart'));
+    cart = [];
+    localStorage.setItem('cart',JSON.stringify(cart));
+    hienThiGioHang();
+});
