@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>MY TODO APP</h1>
+    <div class ="form">
+        <input type="text" id = "input" placeholder="Enter your task">
+        <button id="add-task">
+            <img src="https://cdn-icons-png.flaticon.com/512/992/992651.png" width="20px" height="20px" alt="Add Task Icon">
+        </button>
+    </div>
+    <div class= "filter">
+        <button id="all">All</button>
+        <button id ="Active">Active</button>
+        <button id = Completed>Completed</button>
+    </div>
+    <div class="todo-list">
+        <label class ="todo-item">
+            <input type="checkbox">
+            <p>Sample Task 1</p>
+            <button class = "edit-task">
+                <img src="https://cdn-icons-png.flaticon.com/512/1159/1159633.png" width="20px" height="20px" alt="Edit Task Icon">
+            </button>
+            <button class = "delete-task">
+                <img src="https://cdn-icons-png.flaticon.com/512/3405/3405244.png" width="20px" height="20px" alt="Edit Task Icon">
+            </button>
+        </label>
+    </div>
+    <div class="Footer">
+        <div class="Statistics">
+            <p>Total Tasks:<span class="total-tasks">0</span></p>
+            <p>Completed Tasks: <span class="completed-tasks">0</span></p>
+            <p>Active Tasks: <span class="active-tasks">0</span></p>
+        </div>
+        <div class="Clear">
+            <button id="clear-completed">Clear Completed</button>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

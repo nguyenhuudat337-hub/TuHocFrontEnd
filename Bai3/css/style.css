@@ -1,0 +1,50 @@
+h1{
+    text-align: center;
+}
+.form{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+#input{
+    width: 1300px;
+    height: 30px;
+}
+#add-task{
+    width: 35px;
+    height: 35px;
+    
+}
+.filter{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 30px;
+    
+}
+.todo-item{
+    width: 95%;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    justify-self: center;
+    gap: 10px;
+    margin-top: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.edit-task{
+    margin-left: auto;
+}
+.Statistics{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 20px;
+}
+.Clear{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
