@@ -20,9 +20,32 @@ h1{
 .filter{
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 30px;
     gap: 30px;
     
+}
+/* Style chung cho các nút filter */
+.filter button {
+    padding: 8px 20px;
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+/* Khi hover */
+.filter button:hover {
+    background-color: #e0e0e0;
+}
+
+/* Khi đang được chọn (active) */
+.filter button.active {
+    background-color: #4CAF50;   /* màu xanh */
+    color: white;
+    border-color: #4CAF50;
+    font-weight: 600;
 }
 .todo-list{
     display: flex;
@@ -43,7 +66,10 @@ h1{
     border-radius: 10px;
 }
 .todo-item.completed{
-    background-color: rgb(84, 171, 22);
+    background-color: #4CAF50;   /* màu xanh */
+    color: white;
+    border-color: #4CAF50;
+    font-weight: 600;
 }
 .edit-task{
     margin-left: auto;
@@ -54,8 +80,20 @@ h1{
     gap: 100px;
     margin-top: 20px;
 }
-.Clear{
+#clear-completed{
     display: flex;
-    justify-content: center;
-    margin-top: 20px;
+    justify-self: center;
+    margin-top: 30px;
+    padding: 8px 20px;
+    border: 1px solid #ccc;
+    background-color: #f5f5f5;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s ease;
 }
+#clear-completed:hover {
+    background-color: #e0e0e0;
+}
+
+
