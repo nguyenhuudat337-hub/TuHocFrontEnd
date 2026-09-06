@@ -1,9 +1,15 @@
 const adddTask = document.querySelector("#add-task");
-const taskInput = document.querySelector("#task-input");
-const toDoList = document.querySelector("#todo-list");
+const taskInput = document.querySelector("#input");
+const toDoList = document.querySelector(".todo-list");
 const taskLocal = JSON.parse(localStorage.getItem("tasks")) || [];
-let id = 1;
 
+
+function uppdateTaskStatus(taskId){
+    let task = taskLocal.find(task => task.taskId === taskId);
+    task.completed = !task.completed;
+    localStorage.setItem("tasks", JSON.stringify(taskLocal));
+    loadTasks();
+}
 
 
 function loadTasks(list=taskLocal){
@@ -11,8 +17,8 @@ function loadTasks(list=taskLocal){
     if(taskLocal.length > 0){
         contentToDo = list.map(task =>{
             return `
-            <label class ="todo-item">
-                <input type="checkbox">
+            <label class ="todo-item${task.completed ? "completed" : ""}">
+                <input type="checkbox" ${task.completed ? "checked" : ""} onclick="uppdateTaskStatus(${task.taskId})">
                 <p>${task.taskName}</p>
                 <button class = "edit-task">
                     <img src="https://cdn-icons-png.flaticon.com/512/1159/1159633.png" width="20px" height="20px" alt="Edit Task Icon">
@@ -21,8 +27,8 @@ function loadTasks(list=taskLocal){
                     <img src="https://cdn-icons-png.flaticon.com/512/3405/3405244.png" width="20px" height="20px" alt="Edit Task Icon">
                 </button>
             </label>
-        `.join(" ");
-        });
+        `
+        }).join(" ");
     }else{
         contentToDo = "<p>No tasks available</p>";
     }
@@ -30,24 +36,27 @@ function loadTasks(list=taskLocal){
 }
 loadTasks();
 
-adddTask.addEventListener("click",function(){
+function saveTask(){
     let taskValue = taskInput.value;
     if(taskValue){
-        if(taskLocal.length === 0){
-            taskLocal.push({
-                taskId: id,
-                taskName: taskValue
-            });
-            
-        }else{
-            taskLocal.push({
-                taskId: id++,
-                taskName: taskValue
-            });
-        }
+        taskLocal.push({
+            taskId: taskLocal.length + 1,
+            taskName: taskValue,
+            compeleted: false
+        });
         localStorage.setItem("tasks", JSON.stringify(taskLocal));
+        loadTasks();
+        taskInput.value = "";
     }else{
         alert("Please enter a task");
+    }
+}
+
+adddTask.addEventListener("click", saveTask);
+
+taskInput.addEventListener("keydown",function(e){
+    if(e.key === "Enter"){
+        saveTask();
     }
 });
 
