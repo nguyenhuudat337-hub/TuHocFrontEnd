@@ -1,4 +1,4 @@
-const adddTask = document.querySelector("#add-task");
+const addTask = document.querySelector("#add-task");
 const taskInput = document.querySelector("#input");
 const toDoList = document.querySelector(".todo-list");
 const totalTask = document.querySelector(".total-tasks");
@@ -15,7 +15,7 @@ let taskLocal = JSON.parse(localStorage.getItem("tasks")) || [];
 let filter = "All";
 
 
-function uppdateTaskStatus(taskId){
+function updateTaskStatus(taskId){
     let task = taskLocal.find(task => task.taskId === taskId);
     task.completed = !task.completed;
     localStorage.setItem("tasks", JSON.stringify(taskLocal));
@@ -25,7 +25,7 @@ function uppdateTaskStatus(taskId){
 function editTask(taskId){
     let taskContent = taskLocal.find(task => task.taskId === taskId);
     let newName = prompt("Edit task:");
-    while(newName === ""){
+    while(newName.trim() === ""){
         alert("The input field must not be left blank");
         newName = prompt("Edit task:");
     };
@@ -54,7 +54,7 @@ function loadTasks(list=taskLocal){
         contentToDo = list.map(task =>{
             return `
             <label class ="todo-item ${task.completed ? "completed" : ""}">
-                <input type="checkbox" ${task.completed ? "checked" : ""} onclick="uppdateTaskStatus(${task.taskId})">
+                <input type="checkbox" ${task.completed ? "checked" : ""} onclick="updateTaskStatus(${task.taskId})">
                 <p>${task.taskName}</p>
                 <button class = "edit-task" onclick="editTask(${task.taskId})">
                     <img src="https://cdn-icons-png.flaticon.com/512/1159/1159633.png" width="20px" height="20px" alt="Edit Task Icon">
@@ -122,7 +122,7 @@ function renderByFilter(){
     }
 };
 
-adddTask.addEventListener("click", saveTask);
+addTask.addEventListener("click", saveTask);
 
 taskInput.addEventListener("keydown",function(e){
     if(e.key === "Enter"){
@@ -143,7 +143,7 @@ buttonFilter.forEach(button =>{
 
 
 clearCompleted.addEventListener('click',function (){
-    if(completedTask.textContent == 0){
+    if(!taskLocal.some(task => task.completed)){
         alert("No tasks have been completed.");
     }else{
         let ok = confirm('Are you sure you want to delete the completed tasks?');
