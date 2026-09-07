@@ -16,7 +16,7 @@ p{
     margin-top:90px;
     border: 1px solid black;
     border-radius: 10px;
-    gap: 20px;
+    gap: 10px;
 }
 #logoApp{
     margin-top: 30px;
@@ -26,7 +26,6 @@ p{
 .input-box {
     position: relative;
     width: 300px;
-    margin-bottom: 15px;
     border: 0px solid black;
     border-radius: 10px;
 }
@@ -45,9 +44,21 @@ p{
     box-sizing: border-box;
     padding-left: 40px;
 }
+small {
+    display: block;
+    min-height: 18px;
+}
 #btnSubmit{
     width: 100px;
     height: 30px;
     border: 1px solid black;
     border-radius: 10px;
+}
+#eye-pass,
+#eye-confirmPass {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
 }
