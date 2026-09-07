@@ -1,0 +1,233 @@
+/* =========================================================
+   Auth pages (login / register) — shared with Todo app style
+   Same tokens as css/style.css: neutral surface + indigo accent.
+   ========================================================= */
+
+:root {
+    --bg: #F3F4F6;
+    --surface: #FFFFFF;
+    --border: #E4E6EB;
+    --border-strong: #D3D6DC;
+
+    --text: #1B1E27;
+    --text-muted: #767C8A;
+    --text-faint: #A2A7B3;
+
+    --accent: #3A4CE0;
+    --accent-hover: #2E3DBC;
+    --accent-soft: #EEF0FD;
+
+    --danger: #D6483F;
+
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 18px;
+
+    --shadow-card: 0 1px 2px rgba(20, 22, 30, 0.04), 0 1px 1px rgba(20, 22, 30, 0.03);
+    --shadow-raised: 0 12px 32px rgba(20, 22, 30, 0.10);
+
+    --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scrollbar-gutter: stable;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 32px 16px;
+    background: var(--bg);
+    background-image: radial-gradient(circle at 15% 0%, #F8F9FC 0%, var(--bg) 45%);
+    color: var(--text);
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+    text-align: center;
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--text);
+    max-width: 420px;
+}
+
+p {
+    display: flex;
+    justify-self: right;
+}
+
+.box-register {
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    margin-top: 0;
+    padding: 36px 32px 28px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-raised);
+    gap: 14px;
+}
+
+#logoApp {
+    margin-top: 0;
+    width: 64px;
+    height: 64px;
+    border-radius: 30%;
+    object-fit: cover;
+    border: 1px solid var(--border);
+}
+
+.box-register h3 {
+    margin: 4px 0 8px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 0;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--surface);
+    transition: border-color 0.15s var(--ease), box-shadow 0.15s var(--ease);
+}
+
+.input-box:focus-within {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.input-box i {
+    font-style: normal;
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.input-box input {
+    width: 100%;
+    height: 42px;
+    box-sizing: border-box;
+    padding-left: 40px;
+    padding-right: 36px;
+    border: none;
+    border-radius: var(--radius-sm);
+    background: transparent;
+    font-size: 14px;
+    font-family: inherit;
+    color: var(--text);
+}
+
+.input-box input::placeholder {
+    color: var(--text-faint);
+}
+
+.input-box input:focus {
+    outline: none;
+}
+
+#btnSubmit {
+    width: 100%;
+    max-width: 300px;
+    height: 42px;
+    margin-top: 6px;
+    border: none;
+    border-radius: var(--radius-sm);
+    background: var(--accent);
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background 0.15s var(--ease), transform 0.1s var(--ease);
+}
+
+#btnSubmit:hover {
+    background: var(--accent-hover);
+}
+
+#btnSubmit:active {
+    transform: scale(0.98);
+}
+
+span[id^="eye-"] {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 14px;
+    opacity: 0.7;
+    transition: opacity 0.15s var(--ease);
+}
+
+span[id^="eye-"]:hover {
+    opacity: 1;
+}
+
+small {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    min-height: 16px;
+    margin-top: -6px;
+    font-size: 12px;
+    color: var(--danger);
+    text-align: left;
+}
+
+.box-register > a {
+    margin-top: 10px;
+    font-size: 13px;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.15s var(--ease);
+}
+
+.box-register > a:hover {
+    color: var(--accent);
+    text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 19px;
+        padding: 0 8px;
+    }
+
+    .box-register {
+        padding: 28px 20px 24px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+    }
+}
