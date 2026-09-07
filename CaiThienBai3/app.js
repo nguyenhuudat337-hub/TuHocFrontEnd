@@ -77,7 +77,7 @@ loadTasks();
 
 function saveTask(){
     let taskValue = taskInput.value.trim();
-    let check = taskLocal.some(task => task.taskName.toLowerCase() === taskValue.toLowerCase());
+    let check = taskLocal.some(task => task.taskName.toUpperCase() === taskValue.toUpperCase());
     if (check){
         alert('The task already exists.');
         return;
@@ -91,7 +91,6 @@ function saveTask(){
         localStorage.setItem("tasks", JSON.stringify(taskLocal));
         renderByFilter();
         taskInput.value = "";
-        alert("Add task successfull");
     }else{
         alert("Please enter a task");
     }

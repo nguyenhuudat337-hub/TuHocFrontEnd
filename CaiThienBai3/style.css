@@ -4,7 +4,7 @@
    muted sage for "done", quiet red reserved for destructive actions.
    ========================================================= */
 
-   :root {
+:root {
     --bg: #F3F4F6;
     --surface: #FFFFFF;
     --border: #E4E6EB;
@@ -37,10 +37,6 @@
 
 * {
     box-sizing: border-box;
-}
-
-html {
-    scrollbar-gutter: stable;
 }
 
 body {
@@ -281,6 +277,7 @@ h1::after {
 
 .todo-item.completed p {
     color: var(--text-muted);
+    text-decoration: line-through;
     text-decoration-color: var(--text-faint);
 }
 
